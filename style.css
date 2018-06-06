@@ -1,0 +1,40 @@
+body {
+  background: #555555;
+  padding: 20px;
+  font-family: Helvetica;
+}
+
+#banner-message {
+  background: #fff;
+  border-radius: 4px;
+  padding: 20px;
+  font-size: 20px;
+  text-align: center;
+  transition: all 0.2s;
+  margin: 0 auto;
+  width: 300px;
+}
+
+button {
+  background: #008CBA;
+  border: none;
+  border-radius: 5px;
+  height: 38px;
+  width: 38px;
+  margin: 2px;
+  font-size: 15px;
+  color: #fff;
+  cursor: pointer;
+}
+
+button.correct {
+  background: #4CAF50;
+}
+
+button.wrong {
+  background: #f44336;
+}
+
+.audios {
+  display: none;
+}
