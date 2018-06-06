@@ -1,7 +1,7 @@
 body {
   background: #555555;
-  padding: 20px;
   font-family: Helvetica;
+  text-align: center;
 }
 
 #banner-message {
@@ -9,7 +9,6 @@ body {
   border-radius: 4px;
   padding: 20px;
   font-size: 20px;
-  text-align: center;
   transition: all 0.2s;
   margin: 0 auto;
   width: 300px;
