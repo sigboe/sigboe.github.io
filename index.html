@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title> Vokaler-Uttale </title>
+    <title> Vokaler Trening </title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,19 +18,30 @@
         <script src="jquery-3.3.1.min.js"></script>
         <script type="text/javascript" src="script.js"></script>
 
+        <ul>
+          <li><a class="active">Vokal Trening</a></li>
+          <li><a href="https://github.com/sigboe/sigboe.github.io" target="_blank">Kildekode</a></li>
+          <li style="float:right" class="dropdown"><a class="dropbtn">Om</a>
+            <div class="dropdown-content">
+              <p>This app is dedicated to my loving wife. <i class="fas fa-heart"></i></p>
+            </div>
+          </li>
+        </ul>
+
 <section id="audio"></section>
 
+<br>
 <div id="banner-message">
   <button id="play"><i class="fas fa-volume-up"></i></button> <button id="next"><i class="fas fa-arrow-circle-right"></i>
 </button><br><br>
   Riktig: <score id="correct">0</score> Feil: <score id="wrong">0</score><br>
   <button id="a">A</button> <button id="e">E</button> <button id="i">I</button><br>
   <button id="o">O</button> <button id="u">U</button> <button id="y">Y</button><br>
-  <button id="ae">Æ</button> <button id="oe">Ø</button> <button id="aa">Å</button>
+  <button id="ae">Æ</button> <button id="oe">Ø</button> <button id="aa">Å</button><br><br>
+  score: <score id="percent">0</score>%
 </div>
-<br>score: <score id="percent">0</score>%
 
-<div class="footer">This app is dedicated to my loving wife. <i class="fas fa-heart"></i></div>
+<!-- This app is dedicated to my loving wife. <i class="fas fa-heart"></i> -->
 </body>
 
 </html>
