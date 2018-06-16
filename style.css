@@ -25,6 +25,12 @@ button {
   font-weight: bold;
   color: #fff;
   cursor: pointer;
+  text-transform: uppercase;
+}
+
+grid:nth-child(3n):after {  /* (3n+1) */
+  content: '\A';
+  white-space: pre;
 }
 
 button.correct {

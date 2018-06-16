@@ -1,6 +1,15 @@
 window.onload=function(){
 
-var vokalid = ["a", "e", "i", "o", "u", "y", "ae", "oe", "aa"];
+$.ajaxSetup({ async: false });
+
+var vokalid = [];
+$.get('audio/vocals.txt', function(txtFile){
+  vokalid = txtFile.split("\n");
+});
+console.log(vokalid);
+
+// var vokalid = ["a", "e", "i", "o", "u", "y", "æ", "ø", "å"];
+
 var vokalnr = Math.floor(Math.random() * vokalid.length);
 var correct = 0;
 var wrong = 0;
@@ -17,7 +26,7 @@ function vocalButton (p1){
 		answered.push(vokalid[p1]);
 		correctisanswered = 1;
 	}else if($.inArray(vokalid[p1], answered) == 0){
-	}else {
+	}else if($.inArray(vokalid[p1], answered) == -1){
 		$("#" + vokalid[p1]).removeClass("correct").addClass("wrong");
 		wrong = wrong + 1;
 		$("#wrong").html(wrong);
@@ -35,7 +44,7 @@ $("#next").on("click", function(){
   if (correctisanswered == 1){
 	vokalnr = Math.floor(Math.random() * vokalid.length);
 	$('#' + vokalid[vokalnr] + "-audio").trigger("play")
-	$("#a,#e,#i,#o,#u,#y,#ae,#oe,#aa").removeClass("wrong").removeClass("correct");
+	$("*").removeClass("wrong").removeClass("correct");
 	answered.length = 0
 	correctisanswered = 0;
 	if (wrong == 0) {
@@ -47,6 +56,12 @@ $("#next").on("click", function(){
   }
 })
 
+var y = "";
+for (i = 0; i < vokalid.length; i++) {
+  y = y + '<grid><button id="' + vokalid[i] + '">' + vokalid[i] + '</button></grid>'
+  }
+document.getElementById("button-grid").innerHTML = y;
+
 for (i = 0; i < vokalid.length; i++) {
     vocalButton(i);
 }
@@ -57,4 +72,4 @@ for (i = 0; i < vokalid.length; i++) {
 	}
 document.getElementById("audio").innerHTML = x;
 
-    }
+}
